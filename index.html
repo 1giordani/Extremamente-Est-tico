@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Estudo Fácil — organizador simples de estudos.">
+  <title>Estudo Fácil</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topo">
+    <div>
+      <p class="eyebrow">ORGANIZAÇÃO DE ESTUDOS</p>
+      <h1>Estudo Fácil 📚</h1>
+      <p>Organize matérias, tarefas e seu progresso em um só lugar.</p>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="card">
+      <h2>Adicionar tarefa</h2>
+      <form id="taskForm">
+        <label for="task">Tarefa</label>
+        <input id="task" type="text" placeholder="Ex.: Revisar Direito Constitucional" required>
+        <label for="subject">Matéria</label>
+        <select id="subject">
+          <option>Direito</option>
+          <option>Português</option>
+          <option>Raciocínio Lógico</option>
+          <option>Informática</option>
+          <option>Programação</option>
+          <option>Outra</option>
+        </select>
+        <button type="submit">Adicionar tarefa</button>
+      </form>
+    </section>
+
+    <section class="dashboard">
+      <div class="card indicador"><strong id="total">0</strong><span>Tarefas</span></div>
+      <div class="card indicador"><strong id="concluidas">0</strong><span>Concluídas</span></div>
+      <div class="card indicador"><strong id="progresso">0%</strong><span>Progresso</span></div>
+    </section>
+
+    <section class="card">
+      <div class="section-title">
+        <h2>Minhas tarefas</h2>
+        <button id="limpar" class="secondary" type="button">Limpar concluídas</button>
+      </div>
+      <ul id="taskList" class="tasks"></ul>
+      <p id="empty" class="empty">Nenhuma tarefa cadastrada ainda.</p>
+    </section>
+  </main>
+
+  <footer>Projeto desenvolvido por Giordani • HTML, CSS e JavaScript</footer>
+  <script src="script.js"></script>
+</body>
+</html>
